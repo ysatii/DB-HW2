@@ -23,7 +23,17 @@ ALTER USER 'sys_test'@'localhost' IDENTIFIED WITH mysql_native_password BY 'pass
 ### Результатом работы должны быть скриншоты обозначенных заданий, а также простыня со всеми запросами.
 
 ## Решение 1  
-1. `Анализ задачи`  
+1. СУБД MYSQL установлена, установлен command line Client 
+ ![alt text](https://github.com/ysatii/DB-HW2/blob/main/img/image1.jpg)  
+ 
+2. Создадим учётную запись sys_temp.
+```
+CREATE USER 'sys_test'@'localhost' IDENTIFIED BY 'password';
+```
+3. Выполним запрос на получение списка пользователей в базе данных.
+ ![alt text](https://github.com/ysatii/DB-HW2/blob/main/img/image1_1.jpg)  
+ 
+ 
  
 
 
