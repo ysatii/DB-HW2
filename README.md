@@ -44,18 +44,65 @@ customer         | customer_id
 SHOW TABLES;
 
 ```
- ![alt text](https://github.com/ysatii/DB-HW2/blob/main/img/image1.jpg)  
+ ![alt text](https://github.com/ysatii/DB-HW2/blob/main/img/image2.jpg)  
  
  
  нам нужны именно таблицы!  
 ```
 SHOW FULL TABLES;
 ```
+ ![alt text](https://github.com/ysatii/DB-HW2/blob/main/img/image2_1.jpg)  
+
 Таблицы имеют тип - BASE TABLE  
+```
+SELECT table_name from
+information_schema.tables 
+WHERE table_type = 'BASE TABLE' and TABLE_SCHEMA = 'sakila';
+```
+ ![alt text](https://github.com/ysatii/DB-HW2/blob/main/img/image2_2.jpg)  
+ Таблиц всего 16! остальное представления
+ 
+ Используя служебные таблицы можем узнать колличество первичных индексов у каждой таблицы
+```
+select
+	TABLE_NAME,
+	COLUMN_NAME
+from
+	INFORMATION_SCHEMA.COLUMNS
+where
+	TABLE_SCHEMA = 'sakila'
+	and COLUMN_KEY = 'PRI'
+	and TABLE_NAME in 
+(
+	select
+		table_name
+	from
+		information_schema.tables
+	where
+		table_type = 'BASE TABLE'
+		and TABLE_SCHEMA = 'sakila')
+order by
+	table_name;
+```
+ ![alt text](https://github.com/ysatii/DB-HW2/blob/main/img/image2_3.jpg)  
+ 
+```
+ select
+	TABLE_NAME,
+	GROUP_CONCAT(COLUMN_NAME)
+from
+	INFORMATION_SCHEMA.KEY_COLUMN_USAGE
+where
+	TABLE_SCHEMA = 'sakila'
+	and CONSTRAINT_NAME = 'PRIMARY'
+group by
+	TABLE_NAME;
+```
+
+ ![alt text](https://github.com/ysatii/DB-HW2/blob/main/img/image2_4.jpg)  
 
 
-
-
+https://github.com/ysatii/DB-HW2/blob/main/img/image1.jpg
 ## Задание 3*
 1. `Уберите у пользователя sys_temp права на внесение, изменение и удаление данных из базы sakila.`  
 2. `Выполните запрос на получение списка прав для пользователя sys_temp. (скриншот)`
