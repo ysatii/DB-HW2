@@ -73,7 +73,7 @@ SHOW TABLES;
 
  ![alt text](https://github.com/ysatii/DB-HW2/blob/main/img/image1_5.jpg)   
   
- посмтрим наличи е базы в програме DBeaver  
+ посмотрим наличие базы в програме DBeaver   
   ![alt text](https://github.com/ysatii/DB-HW2/blob/main/img/image1_6.jpg)  
   
  Диаграмма базы данных  
