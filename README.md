@@ -34,9 +34,52 @@ CREATE USER 'sys_test'@'localhost' IDENTIFIED BY 'password';
  ![alt text](https://github.com/ysatii/DB-HW2/blob/main/img/image1_1.jpg)  
  
  
+4. `Дадим все права пользователю sys_temp.`   
+```
+show grants for 'sys_test'@'localhost';
+```
+
+5. `Выполним запрос на получение списка прав для пользователя sys_temp`  
+```
+show grants for 'sys_test'@'localhost';  
+```
+ ![alt text](https://github.com/ysatii/DB-HW2/blob/main/img/image1_2.jpg)  
+
+
+6. `Переподключимся к базе данных от имени sys_temp.`  
+```
+mysql -u sys_test -p
+```
+ ![alt text](https://github.com/ysatii/DB-HW2/blob/main/img/image1_3.jpg)  
  
+7. `Восстановим дамп в базу данных`
+```
+C:\Program Files\MySQL\MySQL Server 8.4\bin>mysql -u sys_test -p sakila < C:\Users\admin\Downloads\sakila-db\sakila-db\sakila-schema.sql
+Enter password: ********
+
+C:\Program Files\MySQL\MySQL Server 8.4\bin>mysql -u sys_test -p sakila < C:\Users\admin\Downloads\sakila-db\sakila-db\sakila-data.sql
+Enter password: ********
+```
+ ![alt text](https://github.com/ysatii/DB-HW2/blob/main/img/image1_4.jpg)  
+просмотрим список баз данных, переключимся на sakila и   
+проверим список таблиц   
 
 
+```
+SHOW DATABASES
+USE sakila;
+SHOW TABLES;
+```
+
+ ![alt text](https://github.com/ysatii/DB-HW2/blob/main/img/image1_5.jpg)   
+  
+ посмтрим наличи е базы в програме DBeaver  
+  ![alt text](https://github.com/ysatii/DB-HW2/blob/main/img/image1_6.jpg)  
+  
+ Диаграмма базы данных  
+  ![alt text](https://github.com/ysatii/DB-HW2/blob/main/img/image1_7.jpg)   
+
+ 
 ## Задание 2
 
 Составьте таблицу, используя любой текстовый редактор или Excel, в которой должно быть два столбца:  
