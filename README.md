@@ -120,6 +120,9 @@ rental       |rental_id
 staff        |staff_id                 
 store        |store_id                 
 ```
+Таблица film_actor имеет два ключа actor_id, film_id  
+Таблица film_category имеет два ключа film_id, category_id  
+
 
 ## Задание 3*
 1. `Уберите у пользователя sys_temp права на внесение, изменение и удаление данных из базы sakila.`  
