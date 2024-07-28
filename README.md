@@ -182,3 +182,18 @@ store        |store_id
 2. `Выполните запрос на получение списка прав для пользователя sys_temp. (скриншот)`
 
 ### Результатом работы должны быть скриншоты обозначенных заданий, а также простыня со всеми запросами.Результатом работы должны быть скриншоты обозначенных заданий, а также простыня со всеми запросами.
+
+
+## Решение 3
+```
+
+REVOKE ALL PRIVILEGES, GRANT OPTION FROM 'sys_test'@'localhost';
+show grants for 'sys_test'@'localhost';
+
+GRANT INSERT, UPDATE, DELETE ON `sakila`.* TO 'sys_test'@'localhost';
+show grants for 'sys_test'@'localhost';
+
+REVOKE INSERT, UPDATE, DELETE ON `sakila`.* FROM 'sys_test'@'localhost';
+show grants for 'sys_test'@'localhost';
+```
+ ![alt text](https://github.com/ysatii/DB-HW2/blob/main/img/image3.jpg)  
