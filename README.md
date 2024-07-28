@@ -102,7 +102,6 @@ group by
  ![alt text](https://github.com/ysatii/DB-HW2/blob/main/img/image2_4.jpg)  
 
 
-https://github.com/ysatii/DB-HW2/blob/main/img/image1.jpg
 ## Задание 3*
 1. `Уберите у пользователя sys_temp права на внесение, изменение и удаление данных из базы sakila.`  
 2. `Выполните запрос на получение списка прав для пользователя sys_temp. (скриншот)`
