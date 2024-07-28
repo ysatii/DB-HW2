@@ -39,6 +39,21 @@ customer         | customer_id
 ```
 
 ## Решение 2
+В данной Базе присутсвуют таблицы и представления!  
+```
+SHOW TABLES;
+
+```
+ ![alt text](https://github.com/ysatii/DB-HW2/blob/main/img/image1.jpg)  
+ 
+ 
+ нам нужны именно таблицы!  
+```
+SHOW FULL TABLES;
+```
+Таблицы имеют тип - BASE TABLE  
+
+
 
 
 ## Задание 3*
